@@ -1,0 +1,58 @@
+/* General container styling */
+.container {
+    padding: 20px; /* Add padding inside the container */
+    background-color: #f8f9fa; /* Light background color for the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Text center alignment */
+  .text-center {
+    text-align: center; /* Center align text */
+  }
+  
+  /* Heading styling */
+  h2 {
+    font-size: 2rem; /* Larger font size for emphasis */
+    color: #343a40; /* Dark gray color for text */
+    margin-bottom: 20px; /* Space below the heading */
+    font-weight: 600; /* Semi-bold font weight for the heading */
+  }
+  
+  /* Button styling */
+  .btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border-color: #007bff; /* Border color to match button */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Add padding to the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure button aligns properly */
+    margin-top: 10px; /* Add margin top for spacing */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #004080; /* Darker border color on hover */
+  }
+  
+  /* Conditional component styling */
+  .mt-4 {
+    margin-top: 1.5rem; /* Add margin top for spacing */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767.98px) {
+    .container {
+      padding: 15px; /* Adjust padding on smaller screens */
+    }
+  
+    h2 {
+      font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+  
+    .btn-primary {
+      padding: 8px 16px; /* Adjust padding on smaller screens */
+    }
+  }
+  

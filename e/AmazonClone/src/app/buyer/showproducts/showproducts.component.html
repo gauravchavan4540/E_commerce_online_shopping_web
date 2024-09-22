@@ -1,0 +1,98 @@
+<div class="container mt-4">
+  <!-- Filters Section -->
+  <div class="row mb-3">
+    <div class="col-md-4 mb-3">
+      <label for="category" class="form-label">Category:</label>
+      <select id="category" [(ngModel)]="catid" name="category" class="form-select">
+        <option value="0">All Categories</option>
+        <option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</option>
+      </select>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="minprice" class="form-label">Min Price:</label>
+      <input type="number" [(ngModel)]="minprice" id="minprice" name="minprice" class="form-control">
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="maxprice" class="form-label">Max Price:</label>
+      <input type="number" [(ngModel)]="maxprice" id="maxprice" name="maxprice" class="form-control">
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6 mb-3">
+      <label for="minrating" class="form-label">Min Rating:</label>
+      <input type="number" [(ngModel)]="minrating" id="minrating" name="minrating" class="form-control">
+    </div>
+    <div class="col-md-6 d-flex align-items-end mb-3">
+      <button (click)="loadProduct()" class="btn btn-primary w-100">Load Products</button>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <div class="row">
+    <div class="col-md-6" *ngFor="let p of products; let i = index">
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.name }}</h5>
+          <p class="card-text"><strong>Price:</strong> {{ p.price }}</p>
+          <p class="card-text"><strong>Description:</strong> {{ p.description }}</p>
+          <p class="card-text">
+            <strong>Quantity:</strong>
+            <ng-container *ngIf="p.quantity === 0">Not available</ng-container>
+            <ng-container *ngIf="p.quantity > 0 && p.quantity < 5">Limited stock</ng-container>
+            <ng-container *ngIf="p.quantity >= 5">Available</ng-container>
+          </p>
+          <p class="card-text" *ngIf="p.days <= 5"><strong>Recently added</strong></p>
+          <p class="card-text"><strong>Discount:</strong> {{ p.discount }}</p>
+          <p class="card-text"><strong>Rating:</strong> {{ p.rating }}</p>
+
+          <label for="rating" class="form-label"><strong>Give Rating: </strong></label>
+          <select id="rating" [(ngModel)]="p.ratingChange" (change)="printRating(p)" class="form-select mb-2">
+            <option [value]="0">0 Star</option>
+            <option [value]="1">1 Star</option>
+            <option [value]="2">2 Stars</option>
+            <option [value]="3">3 Stars</option>
+            <option [value]="4">4 Stars</option>
+            <option [value]="5">5 Stars</option>
+          </select>
+
+          <button (click)="addToCart(p)" class="btn btn-success w-100">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cart Section -->
+  <div class="row">
+    <div class="col-12">
+      <button (click)="cartProduct()" class="btn btn-primary w-100 mb-4">View Cart</button>
+
+      <div *ngIf="showCart" class="mt-4">
+        <h2>Your Cart</h2>
+        <div class="row">
+          <div class="col-md-6" *ngFor="let item of cartItems; let i = index">
+            <div class="card mb-3">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <p class="card-text"><strong>Price:</strong> {{ item.price }}</p>
+                <p class="card-text"><strong>Description:</strong> {{ item.description }}</p>
+                <p class="card-text"><strong>Discount:</strong> {{ item.discount }}%</p>
+                <p class="card-text"><strong>Quantity:</strong></p>
+                <input type="number" [(ngModel)]="item.newQuantity" (ngModelChange)="handleQuantityChange(item)"
+                  class="form-control mb-2">
+                <p class="card-text"><strong>Amount after discount:</strong> {{ calculateDiscountedAmount(item) *
+                  (item.newQuantity ?? 1) }}</p>
+                <button (click)="removeItemFromCart(item.id)" class="btn btn-danger w-100">Remove from Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <h4>Total Amount: {{ totalAmount }}</h4>
+        </div>
+        <button (click)="showCart = false" class="btn btn-warning w-100 mb-2">Back to Products</button>
+        <button (click)="placeOrder()" class="btn btn-success w-100">Place Order</button>
+      </div>
+    </div>
+  </div>
+</div>

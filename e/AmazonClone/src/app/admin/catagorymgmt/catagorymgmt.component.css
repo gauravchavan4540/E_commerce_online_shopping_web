@@ -1,0 +1,98 @@
+/* General container styling */
+.container {
+    padding: 20px; /* Add padding inside the container */
+    background-color: #f8f9fa; /* Light background color for the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Heading styling */
+  h3 {
+    font-size: 1.75rem; /* Font size for headings */
+    color: #343a40; /* Dark gray color for text */
+    margin-bottom: 1rem; /* Space below the heading */
+    font-weight: 600; /* Semi-bold font weight for the heading */
+  }
+  
+  /* Table styling */
+  .table {
+    width: 100%; /* Full width of the container */
+    margin-bottom: 1.5rem; /* Space below the table */
+    border-collapse: collapse; /* Remove spacing between table cells */
+  }
+  
+  .table-bordered {
+    border: 1px solid #dee2e6; /* Light gray border for the table */
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1; /* Light gray background on hover */
+  }
+  
+  .table th, .table td {
+    padding: 12px; /* Add padding inside table cells */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #dee2e6; /* Border for each cell */
+  }
+  
+  .table thead th {
+    background-color: #e9ecef; /* Light gray background for table headers */
+    color: #495057; /* Dark gray text color for headers */
+    font-weight: bold; /* Make header text bold */
+  }
+  
+  /* Button styling */
+  .btn {
+    padding: 8px 12px; /* Add padding to the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    text-align: center; /* Center text inside the button */
+    display: inline-block; /* Ensure button aligns properly */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Red background color */
+    border-color: #dc3545; /* Border color to match button */
+    color: #fff; /* White text color */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Darker red on hover */
+    border-color: #bd2130; /* Darker border color on hover */
+  }
+  
+  .btn-success {
+    background-color: #28a745; /* Green background color */
+    border-color: #28a745; /* Border color to match button */
+    color: #fff; /* White text color */
+  }
+  
+  .btn-success:hover {
+    background-color: #218838; /* Darker green on hover */
+    border-color: #1e7e34; /* Darker border color on hover */
+  }
+  
+  /* Form-inline styling */
+  .form-inline {
+    display: flex; /* Flexbox for inline form elements */
+    align-items: center; /* Align items vertically center */
+  }
+  
+  .form-inline .form-control {
+    border-radius: 5px; /* Rounded corners for input fields */
+    border: 1px solid #ced4da; /* Border color for input fields */
+    padding: 0.5rem; /* Add padding inside input fields */
+  }
+  
+  .form-inline .form-control:focus {
+    border-color: #80bdff; /* Border color on focus */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Shadow on focus */
+  }
+  
+  .mr-2 {
+    margin-right: 0.5rem; /* Space to the right of the element */
+  }
+  
+  .mb-3 {
+    margin-bottom: 1rem; /* Space below the element */
+  }
+  

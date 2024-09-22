@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <!-- Display Categories -->
+  <h3>Category List</h3>
+  <table class="table table-bordered table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th>SN</th>
+        <th>Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cat of list; let i=index">
+        <td>{{i + 1}}</td>
+        <td>{{cat.name}}</td>
+        <td>
+          <button (click)="deleteCategory(cat.id)" class="btn btn-danger btn-sm">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Add New Category -->
+  <h3>Add New Category</h3>
+  <div class="form-inline mb-3">
+    <label class="mr-2" for="categoryName">Category:</label>
+    <input type="text" id="categoryName" class="form-control mr-2" [(ngModel)]="name">
+    <button class="btn btn-success" (click)="addCategory()">Add</button>
+  </div>
+</div>

@@ -1,0 +1,101 @@
+/* General container styling */
+.container {
+    padding: 0; /* Remove default padding */
+  }
+  
+  /* Centering the card */
+  .d-flex {
+    display: flex;
+  }
+  
+  .justify-content-center {
+    justify-content: center;
+  }
+  
+  .align-items-center {
+    align-items: center;
+  }
+  
+  .vh-100 {
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Card styling */
+  .card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Image styling */
+  .img-fluid {
+    max-width: 100%; /* Ensure image is responsive */
+  }
+  
+  /* Heading styling */
+  .h5 {
+    font-size: 1.25rem; /* Adjust font size for headings */
+    color: #343a40; /* Dark gray color for text */
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px; /* Space below each form group */
+  }
+  
+  .form-control {
+    border-radius: 5px; /* Rounded corners for input fields */
+    border: 1px solid #ced4da; /* Border color for input fields */
+  }
+  
+  .form-control:focus {
+    border-color: #80bdff; /* Border color on focus */
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25); /* Shadow on focus */
+  }
+  
+  /* Button styling */
+  .btn-warning {
+    background-color: #ffc107; /* Bootstrap warning color */
+    border-color: #ffc107; /* Border color to match button */
+    color: #212529; /* Dark text color for contrast */
+    padding: 10px; /* Add padding to the button */
+    border-radius: 5px; /* Rounded corners for the button */
+  }
+  
+  .btn-warning:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+    border-color: #d39e00; /* Darker border color on hover */
+  }
+  
+  /* Link button styling */
+  .btn-link {
+    color: #007bff; /* Blue color for links */
+    font-size: 0.875rem; /* Slightly smaller font size for link buttons */
+  }
+  
+  .btn-link:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Text center alignment */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Margin-top for spacing */
+  .mt-3 {
+    margin-top: 1rem; /* Adjust spacing as needed */
+  }
+  
+  .mb-4 {
+    margin-bottom: 1.5rem; /* Adjust bottom margin */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767.98px) {
+    .card {
+      width: 90%; /* Adjust card width on smaller screens */
+    }
+  }
+  

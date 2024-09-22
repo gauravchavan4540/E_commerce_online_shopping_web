@@ -1,0 +1,50 @@
+/* General container styling */
+.container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for better contrast */
+  }
+  
+  /* Center the content within the row */
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style each content section */
+  .content-section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Optional: add a border to each section for better definition */
+  .content-section {
+    border: 1px solid #dee2e6; /* Light gray border for definition */
+  }
+  
+  /* Additional responsiveness */
+  @media (max-width: 767.98px) {
+    .col-md-8 {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  
+  /* Optional: Add some styling to the components inside the sections */
+  app-login, app-admin, app-seller, app-buyer {
+    display: block;
+  }
+  
+  /* Optional: Additional styling for the overall layout */
+  body {
+    font-family: Arial, sans-serif;
+    color: #333; /* Dark gray text for readability */
+  }
+  
+  .mt-5 {
+    margin-top: 3rem; /* Spacing for the top margin */
+  }
+  

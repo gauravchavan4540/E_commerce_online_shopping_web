@@ -1,0 +1,53 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card p-4 shadow-sm" style="max-width: 400px; width: 100%;">
+        <div class="text-center mb-4">
+            <img src="../../assets/Images/th.jpeg" alt="Amazon Logo" class="img-fluid" style="max-width: 100px;">
+            <h2 class="h5 mt-2">{{ isLogin ? 'Login' : 'Sign Up' }}</h2>
+        </div>
+
+        <div *ngIf="isLogin; else signupForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" class="form-control" [(ngModel)]="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" [(ngModel)]="password">
+            </div>
+            <button class="btn btn-warning btn-block mt-3" (click)="login()">Login</button>
+
+            <div class="text-center mt-3">
+                <span>New to Amazon?</span>
+                <button class="btn btn-link" (click)="showSignupForm()">Create Your Amazon Account</button>
+            </div>
+        </div>
+
+        <ng-template #signupForm>
+            <div class="form-group">
+                <label for="newname">Name</label>
+                <input type="text" id="newname" class="form-control" [(ngModel)]="user.name">
+            </div>
+            <div class="form-group">
+                <label for="newUsername">Username</label>
+                <input type="text" id="newUsername" class="form-control" [(ngModel)]="user.userName">
+            </div>
+            <div class="form-group">
+                <label for="newPassword">Password</label>
+                <input type="password" id="newPassword" class="form-control" [(ngModel)]="user.password">
+            </div>
+            <div class="form-group">
+                <label for="newAccountType">Account Type</label>
+                <select id="newAccountType" class="form-control" [(ngModel)]="user.accountType">
+                    <option value="1">Admin</option>
+                    <option value="2">Seller</option>
+                    <option value="3">Buyer</option>
+                </select>
+            </div>
+            <button class="btn btn-warning btn-block mt-3" (click)="signup()">Sign Up</button>
+
+            <div class="text-center mt-3">
+                <button class="btn btn-link" (click)="showLoginForm()">Already have an account? Log in</button>
+            </div>
+        </ng-template>
+    </div>
+</div>

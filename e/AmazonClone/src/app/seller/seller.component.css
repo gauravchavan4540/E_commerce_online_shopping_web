@@ -1,0 +1,65 @@
+/* General container styling */
+.container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for better contrast */
+  }
+  
+  /* Row styling */
+  .row {
+    margin: 0; /* Remove default margin for better control */
+  }
+  
+  /* Heading styling */
+  h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    color: #343a40; /* Dark gray color for text */
+  }
+  
+  /* Button styling */
+  .btn {
+    padding: 10px 20px; /* Add padding for a more clickable area */
+    font-size: 1rem; /* Adjust font size for readability */
+    border-radius: 5px; /* Rounded corners for the button */
+  }
+  
+  /* Primary button styling */
+  .btn-primary {
+    background-color: #007bff; /* Bootstrap primary color */
+    border-color: #007bff; /* Border color to match button */
+    color: #fff; /* White text color */
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #004080; /* Darker border color on hover */
+  }
+  
+  /* Product section styling */
+  .col-md-6 {
+    padding: 15px; /* Add padding to the column */
+  }
+  
+  /* Optional: Add some styling to the product component */
+  app-product {
+    display: block; /* Ensure the component displays properly */
+    background-color: #ffffff; /* White background for the product section */
+    padding: 20px; /* Add padding inside the component */
+    border-radius: 8px; /* Rounded corners for the component */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  /* Margin-top for spacing between rows */
+  .mt-3 {
+    margin-top: 1rem; /* Adjust spacing as needed */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767.98px) {
+    .col-md-6 {
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+  

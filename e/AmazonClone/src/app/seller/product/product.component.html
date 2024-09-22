@@ -1,0 +1,72 @@
+<div class="container mt-4">
+  <!-- Display Products -->
+  <h3 class="mb-4">Product List</h3>
+  <table class="table table-bordered table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th>SN</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Description</th>
+        <th>Discount</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products; let i=index">
+        <td>{{i + 1}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.discount}}</td>
+        <td>{{product.catName}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Add New Product -->
+  <h3 class="mb-4">Add New Product</h3>
+  <form class="mb-4">
+    <div class="form-row">
+      <div class="form-group ">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" class="form-control" [(ngModel)]="name" name="productName">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group ">
+        <label for="price">Price:</label>
+        <input type="number" id="price" class="form-control" [(ngModel)]="price" name="price">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" class="form-control" [(ngModel)]="quantity" name="quantity">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="description">Description:</label>
+        <input type="text" id="description" class="form-control" [(ngModel)]="description" name="description">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="discount">Discount:</label>
+        <input type="number" id="discount" class="form-control" [(ngModel)]="discount" name="discount">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group ">
+        <label for="category">Category:</label>
+        <select id="category" class="form-control" [(ngModel)]="catid" name="category">
+          <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-success" type="button" (click)="addProduct()">Add Product</button>
+  </form>
+</div>
